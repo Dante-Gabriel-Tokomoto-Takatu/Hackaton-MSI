@@ -10,4 +10,6 @@ Observações:<br>
 
 <br>
 Solução:<br>
-- Lista de controle por reconhecimento facial, a pessoa passa e acusa presença, isso de maneira online e em tempo real, que comunica com o ERP e o ERP comunica com o front end para exibir em um dashboard as presenças.<br>
+- Lista de controle por reconhecimento facial, a pessoa passa e acusa presença, isso de maneira online e em tempo real, que comunica com o ERP e o ERP comunica com o front end para exibir em um dashboard as presenças.<br><br>
+
+Vídeo explicando: https://youtu.be/K0sIhDeI4oE <br>
