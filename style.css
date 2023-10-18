@@ -1,102 +1,259 @@
-:root{
-    --color-dark: rgb(14, 14, 14);
-    --color-dark2: rgb(32, 32, 32);
-    --color-dark3: rgb(22, 22, 22);
-    --color-white: #fff;
-    --color-green: rgb(103, 195, 80);
-    --color-green2: rgb(51, 149, 26);
-    --color-red: rgb(184, 40, 35);
-    --color-red2: rgb(146, 22, 17);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-
 body{
-    font-family: 'Lato';
-    background-color: var(--color-dark);
-    color: var(--color-white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
+  background: rgb(226, 226, 226);
+}
+nav{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 90px;
+  /* width: 280px; */
+  background: #fff;
+  overflow: hidden;
+  transition: 1s;
+}
+nav:hover{
+  width: 280px;
+  transition: 1s;
+}
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  width: 280px;
+  font-size: 14px;
+  color: rgb(85, 83, 83);
+  display: table;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  background: #eee;
+}
+a:hover i{
+  color: #34AF6D;
+  transition: 0.5s;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
 }
 
-.content--add-item{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+.container{
+  display: flex;
 }
 
-#input-new-task,
-#btn-new-task{
-    border: none;
-    font-size: 1rem;
-    outline: none;
-    padding: 1rem;
+/* MAin Section */
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+.main .users{
+  display: flex;
+  width: 100%;
+}
+.users .card{
+  width: 25%;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.users .card img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.users .card h4{
+  text-transform: uppercase;
+}
+.users .card p{
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.users table{
+  margin:  auto;
+}
+.users .per span{
+  padding: 5px;
+  border-radius: 10px;
+  background: rgb(223, 223, 223);
+}
+.users td{
+  font-size: 14px;
+  padding-right: 15px;
+}
+.users .card button{
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+.users .card button:hover{
+  background: #4AD489;
+  color: #fff;
+  transition: 0.5s;
 }
 
-#input-new-task{
-    width: 20rem;
-    border-radius: 1rem;
+/*Attendance List serction  */
+.attendance{
+  margin-top: 20px;
+  text-transform: capitalize;
 }
+.attendance-list{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  color: #fff;
+  background: #34AF6D;
+  text-align: left;
+  font-weight: bold;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+.table tbody tr.active{
+  font-weight: bold;
+  color: #4AD489;
+}
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid #4AD489;
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+.table button:hover{
+  background: #4AD489;
+  color: #fff;
+  transition: 0.5rem;
+}
+I hope you liked this snippet. If so, please share the blog and follow us in our social media profiles and stay connected with this blog. Thank you for visiting.
 
-#btn-new-task{
-    background-color: var(--color-dark2);
-    color: var(--color-white);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: .4s;
-}
+TAGSDashboard DesignWeb Designweb developmentWebsite Development
+ShareFacebookTwitterPinterestWhatsApp
+Previous article
+Create Keyboard UI Design with HTML and CSS
+Next article
+Information Technology Skills Required For Different Sectors
+RELATED ARTICLES
+Dashboard
+Building an Interactive Job Dashboard: A Deep Dive into HTML and CSS
+Dashboard
+Creating an Admin Dashboard with HTML and CSS: A Step-by-Step Guide
+Dashboard
+How to create an Admin Dashboard with HTML and CSS
+MOST POPULAR
+Building an Interactive Job Dashboard: A Deep Dive into HTML and CSS
+May 28, 2023
+Building a Responsive Website with HTML and CSS
+May 26, 2023
+Creating an Admin Dashboard with HTML and CSS: A Step-by-Step Guide
+May 24, 2023
+Build New Modern Website UI Design with HTML and CSS
+March 21, 2023
+Load more
+Categories
+Animation6
+Card Design5
+Clock1
+Dashboard4
+Dev Guide3
+Glass Morphism1
+Hover Effect1
+HTML & CSS4
+JavaScript3
+Login Form7
+Neumorphism4
+Web Design4
+Web Page2
+Code Info
+ABOUT US
+Code Info is a platform for learning Web Development or Creative Designs, here you can learn HTML, CSS & JavaScript.
 
-#btn-new-task:hover{
-    background-color: var(--color-dark3);
-}
+FOLLOW US
+© Code Info - All rights reserved.
 
-#to-do-list{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0;
-}
-
-#to-do-list li{
-    list-style-type: none;
-    font-size: 1.4rem;
-    text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#to-do-list li:hover{
-    background-color: var(--color-dark3);
-    transition: .4s;
-    border-radius: 1rem;
-    padding-left: 1rem;
-}
-
-#btn-ok{
-    border: none;
-    background-color: var(--color-green);
-    color: var(--color-white);
-    padding: .4rem .8rem;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: .4s;
-}
-
-#btn-ok:hover{
-    background-color: var(--color-green2);
-}
+Home
+Privacy Policy
+ 
